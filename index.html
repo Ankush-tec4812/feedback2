@@ -11,66 +11,117 @@
 <body>
     <div class="form-container">
         <h1>Welcome to Blaze</h1>
-        <h2>Your Feedback is Important</h2>
-        <form action="submit_feedback.php" method="POST">
-            <div class="link-container">
-                <a href="https://parentfeedback.netlify.app/" target="_main" class="link">Parent</a>
-                <a href="https://visitorfeedback.netlify.app/" target="_main" class="link">Visitor</a>
-            </div>
-        </form>
+        <h2>Your Feedback is Important</h2>  
+                <a href="https://parentfeedback.netlify.app/" target="_blank" class="link">Parent</a>
+                <a href="/visitor.html" target="_blank" class="link">Visitor</a>           
         <br>
-        <img src="https://bmis.in/wp-content/uploads/2023/11/bmis-8-1.jpg" alt="BMIS Feedback Banner" height="220">
+        <img src="https://bmis.in/wp-content/uploads/2023/11/bmis-8-1.jpg" alt="BMIS Feedback Banner">
     </div>
 
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #080808;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #333;
         }
 
         .form-container {
             background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
+            margin: 0 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333333;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
         h2 {
-            color: #333333;
-            margin-bottom: 20px;
+            color: #666666;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: 400;
         }
 
         .link-container {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
             font-size: 16px;
-            font-weight: bold;
-            text-decoration: underline;
-            color: #007bff;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            width: 45%;
         }
 
         .link:hover {
-            color: #0056b3;
+            background-color: #0056b3;
+            transform: translateY(-3px);
         }
 
         img {
             margin-top: 20px;
-            max-width: 100%;
-            border-radius: 5px;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .link-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .link {
+                width: 100%;
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            img {
+                max-width: 100%;
+                margin-top: 20px;
+            }
         }
     </style>
 </body>
